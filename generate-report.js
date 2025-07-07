@@ -1,26 +1,27 @@
-const report = require('multiple-cucumber-html-reporter');
+const reporter = require('multiple-cucumber-html-reporter');
 
-report.generate({
-  jsonDir: './', // Location of cucumber_report.json
+reporter.generate({
+  jsonDir: '.', // the directory containing the JSON file
   reportPath: './playwright-report',
   metadata: {
     browser: {
-      name: 'chrome',
-      version: '114',
+      name: 'chromium',
+      version: 'latest'
     },
-    device: 'Local machine',
+    device: 'Jenkins Node',
     platform: {
       name: 'windows',
-      version: '11',
-    },
+      version: '10'
+    }
   },
   customData: {
     title: 'Execution Info',
     data: [
-      { label: 'Project', value: 'Playwright BDD Cucumber Tests' },
-      { label: 'Release', value: '1.0.0' },
+      { label: 'Project', value: 'Playwright BDD' },
+      { label: 'Release', value: '1.0' },
+      { label: 'Cycle', value: 'Regression' },
       { label: 'Executed By', value: 'Jenkins' },
-      { label: 'Date', value: new Date().toLocaleString() },
-    ],
-  },
+      { label: 'Execution Time', value: new Date().toLocaleString() }
+    ]
+  }
 });
