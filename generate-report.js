@@ -1,7 +1,7 @@
 const fs = require('fs');
 const reporter = require('cucumber-html-reporter');
 
-let reportDir = 'playwright-report';
+const reportDir = 'playwright-report';
 
 // Ensure directory exists
 if (!fs.existsSync(reportDir)) {
@@ -17,4 +17,4 @@ const options = {
 };
 
 reporter.generate(options);
-console.log('Cucumber report generated successfully!');
+console.log('✅ Cucumber report generated successfully!');
