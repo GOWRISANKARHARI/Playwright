@@ -17,4 +17,4 @@ const options = {
 };
 
 reporter.generate(options);
-console.log('✅ Cucumber report generated successfully!');
+console.log('Cucumber report generated successfully!');
