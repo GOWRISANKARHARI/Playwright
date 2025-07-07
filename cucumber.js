@@ -1,0 +1,11 @@
+module.exports = {
+  default: {
+    formatOptions: {
+      snippetInterface: 'async-await'
+    },
+    paths: ['src/test/features/'],
+    requireModule: ['ts-node/register'],
+    require: ['src/test/steps/*.ts', 'src/hooks/*.ts'],
+    dryRun: false
+  }
+};
