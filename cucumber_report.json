@@ -1,0 +1,506 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "user-authentication-tests;login-should-be-success",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Login should be success",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2978701599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "user navigates to the application",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1463190599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "user click on the login link",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 163115099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user enter the username as \"Hari02\"",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 159543100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "user enter the password as \"0209.Hari*\"",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31786400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "user click on the login button",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 74093800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "Login should be success",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 274536800
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 391577900
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-authentication-tests;login-should-not-be-success",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Login should not be success",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 516989900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "user navigates to the application",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1552003399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "user click on the login link",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 175981299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "user enter the username as \"Hari02\"",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 186481400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "user enter the password as \"\"",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 51045099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "user click on the login button",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 168595299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "Login should fails",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8983100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 414520000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "user-authentication-tests",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "User Authentication tests",
+    "tags": [],
+    "uri": "src\\test\\features\\login.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "user-authentication-tests;add-to-the-cart-should-be-success",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Add to the cart should be success",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 509124799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "user navigates to the application",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1995574800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "user click on the login link",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 153573500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user enter the username as \"Hari01\"",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 163540199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "user enter the password as \"0209.Hari*\"",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 36275799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "user click on the login button",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 170696600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "user search the book \"roomies\"",
+            "match": {
+              "location": "src\\test\\steps\\search.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 297384100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "user add the book to cart",
+            "match": {
+              "location": "src\\test\\steps\\search.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1156036000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "user can view the book carted",
+            "match": {
+              "location": "src\\test\\steps\\search.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7425900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 372361199
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@pass",
+            "line": 6
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-authentication-tests;add-to-the-cart-should-be-success",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "Add to the cart should be success",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 517935199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "user navigates to the application",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6385516800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "user click on the login link",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 154375000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user enter the username as \"Hari02\"",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 154603599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "user enter the password as \"0209.Hari*\"",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23951600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "user click on the login button",
+            "match": {
+              "location": "src\\test\\steps\\loginstep.ts:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 57090800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "user search the book \"Rot & Ruin\"",
+            "match": {
+              "location": "src\\test\\steps\\search.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 774326900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "user add the book to cart",
+            "match": {
+              "location": "src\\test\\steps\\search.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1088201000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "user can view the book carted",
+            "match": {
+              "location": "src\\test\\steps\\search.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5282499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 387177400
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@pass",
+            "line": 6
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "user-authentication-tests",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "User Authentication tests",
+    "tags": [],
+    "uri": "src\\test\\features\\search.feature"
+  }
+]

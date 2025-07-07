@@ -14,6 +14,7 @@
     "@cucumber/cucumber": "^11.3.0",
     "@playwright/test": "^1.53.2",
     "@types/node": "^24.0.10",
+    "cucumber-html-reporter": "^6.0.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   },
