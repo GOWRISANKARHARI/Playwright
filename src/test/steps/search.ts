@@ -2,7 +2,7 @@ import { expect } from '@playwright/test';
 import { setDefaultTimeout,Given,When,Then } from '@cucumber/cucumber';
 import { pageFixture} from '../../hooks/pagefixture';
 
-setDefaultTimeout(60 * 1000);
+setDefaultTimeout(30 * 1000);
 
 Then('user search the book {string}', async function (book) {
    await pageFixture.page?.locator('//input[@placeholder="Search books or authors"]').fill(book);

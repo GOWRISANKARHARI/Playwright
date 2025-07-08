@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js --require-module ts-node/register"
+  "test": "cucumber-js src/test/features --format json:test-results/json/cucumber-report.json",
+  "report": "node generateReport.js"
   },
   "keywords": [],
   "author": "",
