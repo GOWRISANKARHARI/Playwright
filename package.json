@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "test": "cucumber-js src/test/features --format json:test-results/json/cucumber-report.json",
-  "report": "node generateReport.js"
+    "test": "cucumber-js src/test/features --format json:test-results/json/cucumber-report.json --format rerun:rerun.txt",
+    "report": "node generateReport.js",
+    "rerun": "powershell -Command \"Get-Content rerun.txt | ForEach-Object { npx cucumber-js $_ }\""
   },
   "keywords": [],
   "author": "",
@@ -16,11 +17,13 @@
     "@playwright/test": "^1.53.2",
     "@types/node": "^24.0.10",
     "cucumber-html-reporter": "^6.0.0",
+    "dotenv": "^17.1.0",
     "multiple-cucumber-html-reporter": "^3.9.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "playwright": "^1.53.2"
+    "playwright": "^1.53.2",
+    "winston": "^3.17.0"
   }
 }

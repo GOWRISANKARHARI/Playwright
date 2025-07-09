@@ -1,38 +1,44 @@
-import { Given, Then, When } from '@cucumber/cucumber';
-import { chromium, Page, Browser } from '@playwright/test';
-import { expect } from '@playwright/test';
+import { Given, When, Then } from '@cucumber/cucumber';
+import { chromium, Browser } from '@playwright/test';
 import { pageFixture } from '../../hooks/pagefixture';
+import HeaderPage from '../../pages/headerPage';
+import LoginPage from '../../pages/loginPage';
+
+let headerPage: HeaderPage;
+let loginPage: LoginPage;
 
 Given('user navigates to the application', async function () {
-  await pageFixture.page?.goto('https://bookcart.azurewebsites.net/');
+  const baseurl = process.env.BASEURL || 'https://bookcart.azurewebsites.net/';
+  if (!pageFixture.page) {
+    const browser: Browser = await chromium.launch({ headless: true });
+    const context = await browser.newContext();
+    pageFixture.page = await context.newPage();
+  }
+  headerPage = new HeaderPage(pageFixture.page);
+  loginPage = new LoginPage(pageFixture.page);
+  await pageFixture.page.goto(baseurl);
 });
 
 Given('user click on the login link', async function () {
-           await pageFixture.page?.locator('//span[contains(text(),"Login")]').click();
-         });
+  await headerPage.clickLoginLink();
+});
 
-Given('user enter the username as {string}', async function (username) {
+Given('user enter the username as {string}', async function (username: string) {
+  await loginPage.enterUsername(username);
+});
 
-            await pageFixture.page?.locator('//input[@placeholder="Username"]').fill(username);
-         });
-
-Given('user enter the password as {string}', async function (password) {
-           await pageFixture.page?.locator('//input[@placeholder="Password"]').fill(password);
-
-         });
+Given('user enter the password as {string}', async function (password: string) {
+  await loginPage.enterPassword(password);
+});
 
 When('user click on the login button', async function () {
-            await pageFixture.page?.locator('//button[@class="mdc-button mdc-button--raised mat-mdc-raised-button mat-primary mat-mdc-button-base"]//span[2]').click();
-         });
-
+  await loginPage.clickLoginButton();
+});
 
 Then('Login should be success', async function () {
-            const name = await pageFixture.page?.locator('//span[contains(text()," Swagger ")]//parent::a//preceding-sibling::mat-menu//preceding-sibling::a//child::span[2]//span').textContent();
-            await expect(name).toBe(" Hari02"); 
-                                     
-           
-         });
+  await headerPage.assertLoginSuccess("Hari02");
+});
+
 Then('Login should fails', async function () {
-          const errorMessage = await pageFixture.page?.locator('//mat-error[contains(text(),"Password is required")]').textContent();
-          await expect(errorMessage).toBe("Password is required");
-       });
+  await loginPage.assertLoginFailed("Password is required");
+});

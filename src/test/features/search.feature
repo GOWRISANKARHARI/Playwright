@@ -3,7 +3,7 @@ Feature: User Authentication tests
 Background:
     Given user navigates to the application
     And user click on the login link
-@pass
+
 Scenario: Add to the cart should be success
     Given user enter the username as "<username>"
     And user enter the password as "<password>"
